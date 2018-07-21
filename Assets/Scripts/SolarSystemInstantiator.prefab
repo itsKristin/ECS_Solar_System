@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1907242122880040}
+  m_IsPrefabAsset: 1
+--- !u!1 &1907242122880040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4839132564080406}
+  - component: {fileID: 114158461750967674}
+  m_Layer: 0
+  m_Name: SolarSystemInstantiator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4839132564080406
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907242122880040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 9.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114158461750967674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907242122880040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46b18b2ffcf9484da881875d5df10c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  universeRadius: 400
+  sunPrefab: {fileID: 1520043758401936, guid: 08bf6608b27b18446bc6c575b9e33f51, type: 2}
+  sunPosition: {x: 0, y: 0, z: 0}
+  sunOrbitalElipses:
+  - xExtent: 40
+    yExtent: 45
+  - xExtent: 55
+    yExtent: 59
+  - xExtent: 68
+    yExtent: 81
+  starPrefab: {fileID: 1705486389538594, guid: 8ad944abd0541fd46b5affbf77296b6f, type: 2}
+  minStarsize: 0.25
+  maxStarsize: 1
+  starsAmount: 50000
+  minTwinkleFrequency: 0
+  maxTwinkleFrequency: 2
+  elipseSegments: 36
+  elipseWidth: 0.3
+  orbitalElipsePrefab: {fileID: 1732962254187360, guid: dfec5fdd60b88734bbab7e7421e5009b,
+    type: 2}
+  planets:
+  - planetPrefab: {fileID: 1379959489069046, guid: 27b69ca643c551f4686527ae97abad9b,
+      type: 2}
+    rotationSpeed: 5
+    movementSpeed: 10
+    orbitalElipseToFollow: {fileID: 0}
+  - planetPrefab: {fileID: 1384633774394308, guid: ff70d7f543d0d7749a36344065595705,
+      type: 2}
+    rotationSpeed: 15
+    movementSpeed: 20
+    orbitalElipseToFollow: {fileID: 0}
+  - planetPrefab: {fileID: 1035711132337502, guid: 0d1bbcbb49ad7594bb6372edf8954064,
+      type: 2}
+    rotationSpeed: 3
+    movementSpeed: 80
+    orbitalElipseToFollow: {fileID: 0}
+  - planetPrefab: {fileID: 1302451208029706, guid: e1fd065c83598fb4b8080fe05ffd5655,
+      type: 2}
+    rotationSpeed: 40
+    movementSpeed: 25
+    orbitalElipseToFollow: {fileID: 0}
