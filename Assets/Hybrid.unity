@@ -420,6 +420,21 @@ Prefab:
       propertyPath: planets.Array.data[1].rotationSpeed
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[0].orbit.tilt
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[1].orbit.tilt
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[2].orbit.tilt
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9731edc8c3a7ef245baf616a4b5ae7ec, type: 2}
   m_IsPrefabAsset: 0

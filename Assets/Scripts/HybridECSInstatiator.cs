@@ -16,7 +16,7 @@ public class HybridECSInstatiator : MonoBehaviour
     [SerializeField] float minStarsize;
     [SerializeField] float maxStarsize;
     [SerializeField] int starsAmount;
-    [SerializeField] [Range(0,100)] float minTwinkleFrequency;
+    [SerializeField] [Range(0, 100)] float minTwinkleFrequency;
     [SerializeField] [Range(0, 100)] float maxTwinkleFrequency;
 
     [Header("Orbital Elipses:")]
@@ -29,10 +29,6 @@ public class HybridECSInstatiator : MonoBehaviour
 
     static HybridECSInstatiator instance;
     public static HybridECSInstatiator Instance { get { return instance; } }
-
-    #region Cached Variables
-    List<LineRenderer> activeOrbitalElipses = new List<LineRenderer>();
-    #endregion
 
     GameObject sun;
 
@@ -47,10 +43,9 @@ public class HybridECSInstatiator : MonoBehaviour
     #region Sun
     void PlaceSun()
     {
-        sun = Instantiate(sunPrefab,sunPosition,Quaternion.identity);
+        sun = Instantiate(sunPrefab, sunPosition, Quaternion.identity);
         GameObject sunParent = new GameObject();
 
-        sunParent.transform.parent = this.transform;
         sunParent.name = "Sun";
 
         sun.transform.parent = sunParent.transform;
@@ -62,14 +57,13 @@ public class HybridECSInstatiator : MonoBehaviour
     {
         GameObject starParent = new GameObject();
         starParent.name = "Stars";
-        starParent.transform.parent = this.transform;
 
-        for(int i = 0; i < starsAmount; i++)
+        for (int i = 0; i < starsAmount; i++)
         {
             GameObject currentStar = Instantiate(starPrefab);
             currentStar.transform.parent = starParent.transform;
 
-            currentStar.GetComponent<StarComponent>().twinkleFrequency = Random.Range(minTwinkleFrequency,maxTwinkleFrequency);
+            currentStar.GetComponent<StarComponent>().twinkleFrequency = Random.Range(minTwinkleFrequency, maxTwinkleFrequency);
 
             float randomStarScale = Random.Range(minStarsize, maxStarsize);
             currentStar.transform.localScale = new Vector3(randomStarScale, randomStarScale, randomStarScale);
@@ -84,10 +78,9 @@ public class HybridECSInstatiator : MonoBehaviour
     {
         Vector3[] drawPoints = new Vector3[elipseSegments + 1];
 
-        for(int i = 0; i < elipseSegments; i++)
+        for (int i = 0; i < elipseSegments; i++)
         {
-            Vector2 position = ellipse.Evaluate((float)i / (float)elipseSegments);
-            drawPoints[i] = new Vector3(position.x, position.y, 0.0f);
+            drawPoints[i] = ellipse.Evaluate(i / (elipseSegments - 1f));
         }
         drawPoints[elipseSegments] = drawPoints[0];
 
@@ -95,8 +88,6 @@ public class HybridECSInstatiator : MonoBehaviour
         line.positionCount = elipseSegments + 1;
         line.startWidth = elipseWidth;
         line.SetPositions(drawPoints);
-
-        activeOrbitalElipses.Add(line);
     }
 
     #endregion
@@ -106,7 +97,6 @@ public class HybridECSInstatiator : MonoBehaviour
     {
         GameObject planetParent = new GameObject();
         planetParent.name = "Planets";
-        planetParent.transform.parent = this.transform;
 
         for (int i = 0; i < planets.Count; i++)
         {
@@ -131,21 +121,18 @@ public class OrbitalEllipse
 {
     public float xExtent;
     public float yExtent;
+    public float tilt;
 
-    public OrbitalEllipse(float _xExtent, float _yExtent)
+    public Vector3 Evaluate(float _t)
     {
-        xExtent = _xExtent;
-        yExtent = _yExtent;
-    }
+        Vector3 up = new Vector3(0, Mathf.Cos(tilt * Mathf.Deg2Rad), -Mathf.Sin(tilt * Mathf.Deg2Rad));
 
-    public Vector2 Evaluate(float _t)
-    {
         float angle = Mathf.Deg2Rad * 360f * _t;
 
         float x = Mathf.Sin(angle) * xExtent;
         float y = Mathf.Cos(angle) * yExtent;
 
-        return new Vector2(x, y);
+        return up * y + Vector3.right * x;
     }
 }
 [System.Serializable]
