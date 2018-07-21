@@ -10,7 +10,6 @@ public class HybridECSInstatiator : MonoBehaviour
     [Header("Sun:")]
     [SerializeField] GameObject sunPrefab;
     [SerializeField] Vector3 sunPosition;
-    [SerializeField] List<OrbitalElipse> sunOrbitalElipses;
 
     [Header("Stars:")]
     [SerializeField] GameObject starPrefab;
@@ -35,6 +34,8 @@ public class HybridECSInstatiator : MonoBehaviour
     List<LineRenderer> activeOrbitalElipses = new List<LineRenderer>();
     #endregion
 
+    GameObject sun;
+
     void Awake()
     {
         instance = this;
@@ -46,22 +47,13 @@ public class HybridECSInstatiator : MonoBehaviour
     #region Sun
     void PlaceSun()
     {
-        GameObject sun = Instantiate(sunPrefab,sunPosition,Quaternion.identity);
+        sun = Instantiate(sunPrefab,sunPosition,Quaternion.identity);
         GameObject sunParent = new GameObject();
 
         sunParent.transform.parent = this.transform;
         sunParent.name = "Sun";
 
         sun.transform.parent = sunParent.transform;
-
-        foreach(OrbitalElipse elipse in sunOrbitalElipses)
-        {
-            GameObject currentElipse = Instantiate(orbitalElipsePrefab,sunPosition,Quaternion.identity);
-
-            currentElipse.transform.parent = sun.transform;
-
-            DrawOrbitalElipse(currentElipse.GetComponent<LineRenderer>(), elipse);
-        }
     }
     #endregion
 
@@ -88,23 +80,23 @@ public class HybridECSInstatiator : MonoBehaviour
     #endregion
 
     #region OrbitalElipses
-    void DrawOrbitalElipse(LineRenderer _lineRenderer, OrbitalElipse _elipse)
+    void DrawOrbitalElipse(LineRenderer line, OrbitalEllipse ellipse)
     {
         Vector3[] drawPoints = new Vector3[elipseSegments + 1];
 
         for(int i = 0; i < elipseSegments; i++)
         {
-            Vector2 position = _elipse.Evaluate((float)i / (float)elipseSegments);
+            Vector2 position = ellipse.Evaluate((float)i / (float)elipseSegments);
             drawPoints[i] = new Vector3(position.x, position.y, 0.0f);
         }
         drawPoints[elipseSegments] = drawPoints[0];
 
-        _lineRenderer.useWorldSpace = false;
-        _lineRenderer.positionCount = elipseSegments + 1;
-        _lineRenderer.startWidth = elipseWidth;
-        _lineRenderer.SetPositions(drawPoints);
+        line.useWorldSpace = false;
+        line.positionCount = elipseSegments + 1;
+        line.startWidth = elipseWidth;
+        line.SetPositions(drawPoints);
 
-        activeOrbitalElipses.Add(_lineRenderer);
+        activeOrbitalElipses.Add(line);
     }
 
     #endregion
@@ -118,32 +110,29 @@ public class HybridECSInstatiator : MonoBehaviour
 
         for (int i = 0; i < planets.Count; i++)
         {
-            LineRenderer assignedOrbitalElipse = activeOrbitalElipses[Random.Range(0, activeOrbitalElipses.Count)];
-
             GameObject currentPlanet = Instantiate(planets[i].planetPrefab);
             currentPlanet.transform.parent = planetParent.transform;
 
             currentPlanet.GetComponent<PlanetComponent>().rotationSpeed = planets[i].rotationSpeed;
-            currentPlanet.GetComponent<PlanetComponent>().movementSpeed = planets[i].movementSpeed;
-            currentPlanet.GetComponent<PlanetComponent>().orbitalElipseToFollow = assignedOrbitalElipse;
+            currentPlanet.GetComponent<PlanetComponent>().orbitDuration = planets[i].orbitDuration;
+            currentPlanet.GetComponent<PlanetComponent>().orbit = planets[i].orbit;
 
-            int currentPathPosition = Random.Range(0, assignedOrbitalElipse.positionCount - 1);
-            currentPlanet.GetComponent<PlanetComponent>().currentPathpoint = currentPathPosition;
-
-            currentPlanet.transform.position = assignedOrbitalElipse.GetPosition(currentPathPosition);
-            
+            // Draw orbit
+            GameObject currentElipse = Instantiate(orbitalElipsePrefab, sunPosition, Quaternion.identity);
+            currentElipse.transform.parent = sun.transform;
+            DrawOrbitalElipse(currentElipse.GetComponent<LineRenderer>(), planets[i].orbit);
         }
     }
     #endregion
 }
 
 [System.Serializable]
-public class OrbitalElipse
+public class OrbitalEllipse
 {
     public float xExtent;
     public float yExtent;
 
-    public OrbitalElipse(float _xExtent, float _yExtent)
+    public OrbitalEllipse(float _xExtent, float _yExtent)
     {
         xExtent = _xExtent;
         yExtent = _yExtent;
@@ -162,12 +151,10 @@ public class OrbitalElipse
 [System.Serializable]
 public class Planet
 {
-    [Header("Prefab:")]
     public GameObject planetPrefab;
+    public OrbitalEllipse orbit;
 
     [Header("Movement Settings:")]
     public float rotationSpeed;
-    public float movementSpeed;
-
-    [HideInInspector] public LineRenderer orbitalElipseToFollow;
+    public float orbitDuration;
 }

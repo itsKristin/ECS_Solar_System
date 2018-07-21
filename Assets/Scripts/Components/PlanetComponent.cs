@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlanetComponent : MonoBehaviour {
 
     public float rotationSpeed;
-    public float movementSpeed;
-    public LineRenderer orbitalElipseToFollow;
-
-    public int currentPathpoint;
+    public float orbitDuration;
+    public OrbitalEllipse orbit;
 }
