@@ -81,6 +81,6 @@ Material:
     - _Color: {r: 0.3529412, g: 0.6313726, b: 0.6745098, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
-    - _GroundColor: {r: 0.16161458, g: 0.03818085, b: 0.735849, a: 1}
-    - _SkyTint: {r: 0.55971277, g: 0.4764151, b: 1, a: 1}
+    - _GroundColor: {r: 0.24215466, g: 0.014417935, b: 0.33962262, a: 1}
+    - _SkyTint: {r: 0.8396226, g: 0.04356533, b: 0.5959435, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

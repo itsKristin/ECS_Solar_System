@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02813145, g: 0.019840678, b: 0.08546599, a: 1}
+  m_IndirectSpecularColor: {r: 0.03953608, g: 0.012577616, b: 0.05495006, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -277,6 +277,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4839132564080406, guid: 9731edc8c3a7ef245baf616a4b5ae7ec, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -308,6 +313,155 @@ Prefab:
     - target: {fileID: 4839132564080406, guid: 9731edc8c3a7ef245baf616a4b5ae7ec, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[3].orbit.tilt
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: moonPrefab
+      value: 
+      objectReference: {fileID: 1644703830004046, guid: 5a58006fd08ed2e49859b43b9ce19c1f,
+        type: 2}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[4].planetPrefab
+      value: 
+      objectReference: {fileID: 1302451208029706, guid: e1fd065c83598fb4b8080fe05ffd5655,
+        type: 2}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[4].orbit.xExtent
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[4].orbit.yExtent
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[4].hasMoon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[4].rotationSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[4].orbitDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[5].planetPrefab
+      value: 
+      objectReference: {fileID: 1379959489069046, guid: 27b69ca643c551f4686527ae97abad9b,
+        type: 2}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[5].orbit.xExtent
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[5].orbit.yExtent
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[5].orbit.tilt
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[5].hasMoon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[5].rotationSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[5].orbitDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[6].planetPrefab
+      value: 
+      objectReference: {fileID: 1371350778486938, guid: 19f57008ee973674bbfeec84450d25cc,
+        type: 2}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[6].orbit.xExtent
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[6].orbit.yExtent
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[6].orbit.tilt
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[6].hasMoon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[6].rotationSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[6].orbitDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: maxMoonMovementSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: minMoonMovementSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: planets.Array.data[0].hasMoon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: minStarsize
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: maxStarsize
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: elipseWidth
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
+        type: 2}
+      propertyPath: elipseSegments
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9731edc8c3a7ef245baf616a4b5ae7ec, type: 2}
@@ -444,13 +598,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837778533}
-  m_LocalRotation: {x: -0.020197494, y: 0.84468013, z: -0.031952288, w: -0.533935}
-  m_LocalPosition: {x: 181.13412, y: 11.5661745, z: 101.96786}
+  m_LocalRotation: {x: 0.29876462, y: -0.78735673, z: -0.09651151, w: 0.53056073}
+  m_LocalPosition: {x: 257.7, y: 38.6, z: 120.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.5, y: -115.1, z: -35.51}
 --- !u!114 &1837778539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloomShader: {fileID: 4800000, guid: fce11d22d96524f4caf304d34dbd4f4f, type: 3}
   intensity: 3.9
-  iterations: 7
-  threshold: 0.5
-  softThreshold: 0.51
+  iterations: 16
+  threshold: 0.41
+  softThreshold: 0
   debug: 0

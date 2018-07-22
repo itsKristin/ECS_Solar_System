@@ -82,5 +82,5 @@ Material:
     - _gloss: 0
     - _spec: 0
     m_Colors:
-    - _Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
+    - _Color: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
