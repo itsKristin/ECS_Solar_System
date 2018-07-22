@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4812902246081658}
   - component: {fileID: 33560624295029640}
   - component: {fileID: 23464911257383690}
+  - component: {fileID: 114147959324676166}
+  - component: {fileID: 114206416611943120}
   m_Layer: 0
   m_Name: HybridECSEgypPlanet
   m_TagString: Untagged
@@ -83,3 +85,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543594294442406}
   m_Mesh: {fileID: 4300000, guid: ee6535f71428504449546c25c0673573, type: 3}
+--- !u!114 &114147959324676166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543594294442406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df3af1f9cae7574d88f0a51970fadbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0
+  orbitDuration: 0
+  orbit:
+    xExtent: 0
+    yExtent: 0
+    tilt: 0
+--- !u!114 &114206416611943120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543594294442406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

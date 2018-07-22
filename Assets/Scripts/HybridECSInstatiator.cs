@@ -11,6 +11,11 @@ public class HybridECSInstatiator : MonoBehaviour
     [SerializeField] GameObject sunPrefab;
     [SerializeField] Vector3 sunPosition;
 
+    [Header("Moon:")]
+    [SerializeField] GameObject moonPrefab;
+    [SerializeField] float minMoonMovementSpeed;
+    [SerializeField] float maxMoonMovementSpeed;
+
     [Header("Stars:")]
     [SerializeField] GameObject starPrefab;
     [SerializeField] float minStarsize;
@@ -107,11 +112,29 @@ public class HybridECSInstatiator : MonoBehaviour
             currentPlanet.GetComponent<PlanetComponent>().orbitDuration = planets[i].orbitDuration;
             currentPlanet.GetComponent<PlanetComponent>().orbit = planets[i].orbit;
 
-            // Draw orbit
             GameObject currentElipse = Instantiate(orbitalElipsePrefab, sunPosition, Quaternion.identity);
             currentElipse.transform.parent = sun.transform;
             DrawOrbitalElipse(currentElipse.GetComponent<LineRenderer>(), planets[i].orbit);
+
+            if(planets[i].hasMoon)
+            {
+                GenerateMoon(currentPlanet);
+            }
         }
+    }
+    #endregion
+
+    #region Moons
+    void GenerateMoon(GameObject planet)
+    {
+        GameObject moonParent = new GameObject();
+        moonParent.name = "Moons";
+
+        GameObject currentMoon = Instantiate(moonPrefab);
+        currentMoon.transform.parent = moonParent.transform;
+
+        currentMoon.GetComponent<MoonComponent>().movementSpeed = Random.Range(minMoonMovementSpeed, maxMoonMovementSpeed);
+        currentMoon.GetComponent<MoonComponent>().parentPlanet = planet;
     }
     #endregion
 }
@@ -140,6 +163,8 @@ public class Planet
 {
     public GameObject planetPrefab;
     public OrbitalEllipse orbit;
+
+    public bool hasMoon;
 
     [Header("Movement Settings:")]
     public float rotationSpeed;

@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4910255500712130}
   - component: {fileID: 33652326104660830}
   - component: {fileID: 23237387437643998}
+  - component: {fileID: 114871849537446972}
+  - component: {fileID: 114297386685152848}
   m_Layer: 0
   m_Name: HybridECSOrangePlanet
   m_TagString: Untagged
@@ -83,3 +85,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1438192938505628}
   m_Mesh: {fileID: 4300000, guid: 32ee3a4a0ba913649947d26fd6a83cb0, type: 3}
+--- !u!114 &114297386685152848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1438192938505628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df3af1f9cae7574d88f0a51970fadbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0
+  orbitDuration: 0
+  orbit:
+    xExtent: 0
+    yExtent: 0
+    tilt: 0
+--- !u!114 &114871849537446972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1438192938505628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

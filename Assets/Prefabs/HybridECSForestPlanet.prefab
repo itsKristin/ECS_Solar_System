@@ -112,8 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0
-  movementSpeed: 0
-  orbitalElipseToFollow: {fileID: 0}
+  orbitDuration: 0
+  orbit:
+    xExtent: 0
+    yExtent: 0
+    tilt: 0
 --- !u!114 &114277983095374630
 MonoBehaviour:
   m_ObjectHideFlags: 1

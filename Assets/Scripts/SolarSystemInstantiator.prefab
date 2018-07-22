@@ -54,13 +54,9 @@ MonoBehaviour:
   universeRadius: 400
   sunPrefab: {fileID: 1520043758401936, guid: 08bf6608b27b18446bc6c575b9e33f51, type: 2}
   sunPosition: {x: 0, y: 0, z: 0}
-  sunOrbitalElipses:
-  - xExtent: 40
-    yExtent: 45
-  - xExtent: 55
-    yExtent: 59
-  - xExtent: 68
-    yExtent: 81
+  moonPrefab: {fileID: 0}
+  minMoonMovementSpeed: 6
+  maxMoonMovementSpeed: 35
   starPrefab: {fileID: 1705486389538594, guid: 8ad944abd0541fd46b5affbf77296b6f, type: 2}
   minStarsize: 0.25
   maxStarsize: 1
@@ -74,21 +70,64 @@ MonoBehaviour:
   planets:
   - planetPrefab: {fileID: 1379959489069046, guid: 27b69ca643c551f4686527ae97abad9b,
       type: 2}
-    rotationSpeed: 5
-    movementSpeed: 10
-    orbitalElipseToFollow: {fileID: 0}
+    orbit:
+      xExtent: 40
+      yExtent: 45
+      tilt: 10
+    hasMoon: 0
+    rotationSpeed: 150
+    orbitDuration: 2
   - planetPrefab: {fileID: 1384633774394308, guid: ff70d7f543d0d7749a36344065595705,
       type: 2}
-    rotationSpeed: 15
-    movementSpeed: 20
-    orbitalElipseToFollow: {fileID: 0}
+    orbit:
+      xExtent: 50
+      yExtent: 60
+      tilt: 20
+    hasMoon: 0
+    rotationSpeed: 300
+    orbitDuration: 3
   - planetPrefab: {fileID: 1035711132337502, guid: 0d1bbcbb49ad7594bb6372edf8954064,
       type: 2}
-    rotationSpeed: 3
-    movementSpeed: 80
-    orbitalElipseToFollow: {fileID: 0}
+    orbit:
+      xExtent: 70
+      yExtent: 80
+      tilt: 30
+    hasMoon: 0
+    rotationSpeed: 400
+    orbitDuration: 5
+  - planetPrefab: {fileID: 1438192938505628, guid: 0825014c618545c4d8c8891da0ee589e,
+      type: 2}
+    orbit:
+      xExtent: 90
+      yExtent: 120
+      tilt: -45
+    hasMoon: 1
+    rotationSpeed: 400
+    orbitDuration: 5
   - planetPrefab: {fileID: 1302451208029706, guid: e1fd065c83598fb4b8080fe05ffd5655,
       type: 2}
-    rotationSpeed: 40
-    movementSpeed: 25
-    orbitalElipseToFollow: {fileID: 0}
+    orbit:
+      xExtent: 130
+      yExtent: 140
+      tilt: 0
+    hasMoon: 1
+    rotationSpeed: 400
+    orbitDuration: 5
+  - planetPrefab: {fileID: 1379959489069046, guid: 27b69ca643c551f4686527ae97abad9b,
+      type: 2}
+    orbit:
+      xExtent: 160
+      yExtent: 170
+      tilt: 5
+    hasMoon: 1
+    rotationSpeed: 400
+    orbitDuration: 5
+  - planetPrefab: {fileID: 1371350778486938, guid: 19f57008ee973674bbfeec84450d25cc,
+      type: 2}
+    orbit:
+      xExtent: 190
+      yExtent: 220
+      tilt: 25
+    hasMoon: 1
+    rotationSpeed: 400
+    orbitDuration: 5

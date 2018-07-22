@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02813145, g: 0.019840714, b: 0.08546557, a: 1}
+  m_IndirectSpecularColor: {r: 0.02813145, g: 0.019840678, b: 0.08546599, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -277,11 +277,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4839132564080406, guid: 9731edc8c3a7ef245baf616a4b5ae7ec, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -313,127 +308,6 @@ Prefab:
     - target: {fileID: 4839132564080406, guid: 9731edc8c3a7ef245baf616a4b5ae7ec, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[2].movementSpeed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[0].movementSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[1].movementSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[3].movementSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: starsAmount
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[0].orbit.xExtent
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[0].orbit.yExtent
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[1].orbit.xExtent
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[1].orbit.yExtent
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[3].orbit.xExtent
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[3].orbit.yExtent
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[3].planetPrefab
-      value: 
-      objectReference: {fileID: 1302451208029706, guid: e1fd065c83598fb4b8080fe05ffd5655,
-        type: 2}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[3].rotationSpeed
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[2].orbit.xExtent
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[2].orbit.yExtent
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[0].orbitDuration
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[1].orbitDuration
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[2].orbitDuration
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[0].rotationSpeed
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[2].rotationSpeed
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[1].rotationSpeed
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[0].orbit.tilt
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[1].orbit.tilt
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114158461750967674, guid: 9731edc8c3a7ef245baf616a4b5ae7ec,
-        type: 2}
-      propertyPath: planets.Array.data[2].orbit.tilt
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9731edc8c3a7ef245baf616a4b5ae7ec, type: 2}
@@ -570,8 +444,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837778533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.2, z: -150}
+  m_LocalRotation: {x: -0.020197494, y: 0.84468013, z: -0.031952288, w: -0.533935}
+  m_LocalPosition: {x: 181.13412, y: 11.5661745, z: 101.96786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
